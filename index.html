@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<div class="main-container">
+
+  <div class="main-content">
+
+    <div class="left-container">
+      <div class="card-front">
+        <img id="img-card-front" src="images/bg-card-front.png" alt="visão frontal do cartão">
+        <label id="sym-card-front"><img src="images/card-logo.svg" alt="logo do cartão"></label>
+        <label id="num-card-front">0000 0000 0000 0000</label>
+        <label id="name-card-front">Jane Appleseed</label>
+        <label id="date-card-front">00/00</label>
+      </div>
+      <div class="card-back">
+        <img id="img-card-back" src="images/bg-card-back.png" alt="visão posterior do cartão">
+        <label id="cvc-card-back">000</label>
+      </div>
+    </div>
+
+    <div id="right-container" class="right-container">
+      <form id="form">
+        <div class="form-input">
+          <h4>Cardholder Name</h4>
+          <input id="input0" type="text" placeholder=" e.g. Jane Appleseed" oninput="nameValidate()">
+          <span class="span-required">Insert a name</span>
+        </div>
+        <div class="form-input">
+          <h4>Card Number</h4>
+          <input id="input1" maxlength="16" type="text" placeholder=" e.g. 1234 5678 9123 0000" oninput="numValidate()">
+          <span class="span-required">Insert a valid number</span>
+        </div>
+        <div id="date-cvc">
+          <div class="form-input2">
+           <h4>Exp. Date (MM/YY)</h4> 
+            <input id="input2" maxlength="2" type="number" placeholder=" MM" oninput="monthValidate()">
+            <input id="input3" maxlength="2" type="number" placeholder=" YY" oninput="yearValidate()"><br>
+            <span class="span-required">Insert a valid month</span>
+            <span class="span-required">Insert a valid year</span>
+          </div>
+          <div class="form-input3">
+            <h4>CVC</h4>
+            <input id="input4" maxlength="3" type="text" placeholder=" e.g. 123" oninput="cvcValidate()">
+            <span class="span-required">Insert a valid CVC</span>
+          </div>
+        </div>
+        <button class="confirm" type="submit">Confirm</button>
+      </form>
+      <div id="complete">
+        <img id="img-complete" src="/images/icon-complete.svg" alt="icone de completo">
+        <h1 id="thankyou">Thank you!</h1>
+        <h2 id="carddetails">We've added your card details</h2>
+        <button class="confirm" type="submit">Continue</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Felipe Henrique Ferraz</a>.
+</div>
+
+<script src="/script.js"> </script>
+
+</body>
+
+     
+</html>

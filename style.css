@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+* {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@media screen and ((orientation:portrait)) {
+  body{
+    background-image: url(images/bg-main-mobile.png);
+    background-repeat: repeat-x;
+  }
+
+  .main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-content {
+    width: 450px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-front, .card-back {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 0px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  #img-card-back{
+    position: absolute;
+    top: 0px;
+    left: 45px;
+  }
+
+  #img-card-front{
+    position: absolute;
+    top: 20px;
+    left: -45px;
+  }
+
+  #sym-card-front,#num-card-front,#name-card-front,#date-card-front,#cvc-card-back{
+    position: absolute;
+  }
+
+  #sym-card-front{
+    left: -15px;
+    top: 40px;
+  }
+  #num-card-front{
+    color: hsl(0, 0%, 100%);
+    font-size: 30px;
+    left: -10px;
+    top: 150px;
+  }
+  #name-card-front{
+    color: hsl(0, 0%, 100%);
+    left: -10px;
+    top:220px;
+  }
+  #date-card-front{
+    color: hsl(0, 0%, 100%);
+    right: 80px;
+    top: 220px;
+  }#cvc-card-back{
+    color: hsl(0, 0%, 100%);
+    right: 30px;
+    top: 110px;
+  }
+
+  .right-container{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #date-cvc{
+    display: flex;
+    flex-direction: row;
+    height:15%;
+    padding-bottom: 40px;
+  }
+
+  #form{
+    color: hsl(278, 68%, 11%);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height:85%;
+    padding: 150px 0 0 0;
+  }
+
+  .form-input{
+    width: 100%;
+    height:15%;
+    margin-bottom: 5%;
+  }
+
+  .form-input2 .form-input3{
+    width: 50%;
+
+  }
+
+  #input0,#input1{
+    
+    width: 98%;
+
+  }
+  #input2,#input3{
+
+    margin-right: 5%;
+    width: 30%;
+  }
+  #input4{
+    padding-right: 0;
+    width: 98%;
+  }
+
+  .confirm{
+    border: solid 1px ;
+    border-radius: 10px;
+    background-color: hsl(278, 68%, 11%);;
+    color: white;
+    width: 100%;
+    height:10%;
+    margin-top: 5%;
+    font-size: 18px;
+  }
+
+  .span-required{
+    display: none;
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+    color:hsl(0, 100%, 66%);
+  }
+  
+  #input0,#input1,#input2,#input3,#input4{
+    height: 50%;
+    color: hsl(278, 68%, 11%);
+    border-radius: 5px;
+    border: solid 1px hsl(270, 3%, 87%);
+  }
+  #input0:focus, #input1:focus, #input2:focus, #input3:focus, #input4:focus{
+    border-color: inherit; 
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  #complete{
+    height: 80vb;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #thankyou{
+    color: hsl(278, 68%, 11%);
+  }
+  #carddetails{
+    color:hsl(279, 6%, 55%);
+  }
+}
+
+@media screen and (orientation:landscape) {
+  body{
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: repeat-y;
+    background-size: 33.3% ;
+  }
+
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-content {
+    width: 1440px;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left-container{
+    width: 864px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-front, .card-back {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 43px;
+    width: 690px;
+    height: 45%;
+    position: relative;
+  }
+  
+  #img-card-front{
+    position: absolute;
+  }
+
+  #img-card-back{
+    position: absolute;
+    left: 138px;
+  }
+
+  #sym-card-front,#num-card-front,#name-card-front,#date-card-front,#cvc-card-back{
+    position: absolute;
+  }
+
+  #sym-card-front{
+    left: 70px;
+    top: 20%;
+  }
+  #num-card-front{
+    color: hsl(0, 0%, 100%);
+    font-size: 30px;
+    left: 70px;
+    top: 60%;
+    right: 280px;
+  }
+  #name-card-front{
+    color: hsl(0, 0%, 100%);
+    left: 70px;
+    top: 72%;
+  }
+  #date-card-front{
+    color: hsl(0, 0%, 100%);
+    right: 280px;
+    top: 72%;
+  }#cvc-card-back{
+    color: hsl(0, 0%, 100%);
+    right: 210px;
+    top: 45%;
+  }
+
+  .right-container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #date-cvc{
+    display: flex;
+    flex-direction: row;
+    height:15%;
+    padding-bottom: 40px;
+  }
+
+  #form{
+    color: hsl(278, 68%, 11%);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height:85%;
+    padding: 150px 0 0 0;
+  }
+
+  .form-input{
+    width: 100%;
+    height:15%;
+    margin-bottom: 5%;
+  }
+
+  .form-input2 .form-input3{
+    width: 50%;
+  }
+
+  #input0,#input1{
+    
+    width: 98%;
+
+  }
+  #input2,#input3{
+
+    margin-right: 5%;
+    width: 30%;
+  }
+  #input4{
+    padding-right: 0;
+    width: 98%;
+  }
+
+  .confirm{
+    border: solid 1px ;
+    border-radius: 10px;
+    background-color: hsl(278, 68%, 11%);;
+    color: white;
+    width: 100%;
+    height:10%;
+    margin-top: 5%;
+    font-size: 18px;
+  }
+
+  .span-required{
+    display: none;
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+    color:hsl(0, 100%, 66%);
+  }
+  
+  #input0,#input1,#input2,#input3,#input4{
+    height: 50%;
+    color: hsl(278, 68%, 11%);
+    border-radius: 5px;
+    border: solid 1px hsl(270, 3%, 87%);
+  }
+  #input0:focus, #input1:focus, #input2:focus, #input3:focus, #input4:focus{
+    border-color: inherit; 
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  #complete{
+    height: 80vb;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #thankyou{
+    color: hsl(278, 68%, 11%);
+  }
+  #carddetails{
+    color:hsl(279, 6%, 55%);
+  }
+}
+
+
+  
